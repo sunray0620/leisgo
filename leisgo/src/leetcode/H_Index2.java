@@ -6,9 +6,12 @@ package leetcode;
  */
 public class H_Index2 {
     public int hIndex(int[] citations) {
-        // Corner case;
+        /* Corner case; */
+        if (citations == null || citations.length == 0) {
+            return 0;
+        }
 
-        // Assume is sorted in ascending order.
+        /* Assume is sorted in ascending order. */
         int minIndex = -1;
         int maxIndex = citations.length;
         while (minIndex < maxIndex - 1) {
