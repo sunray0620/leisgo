@@ -3,13 +3,14 @@
 
 # Mac
 **/.DS_Store
+**/.xml
 
 # User-specific stuff:
-.idea/workspace.xml
-.idea/tasks.xml
-.idea/dictionaries
-.idea/vcs.xml
-.idea/jsLibraryMappings.xml
+**/workspace.xml
+**/tasks.xml
+**/dictionaries
+**/vcs.xml
+**/jsLibraryMappings.xml
 
 # Sensitive or high-churn files:
 .idea/dataSources.ids
