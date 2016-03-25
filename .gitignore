@@ -4,6 +4,7 @@
 # Mac
 **/.DS_Store
 **/.xml
+**/.idea/
 
 # User-specific stuff:
 **/workspace.xml
