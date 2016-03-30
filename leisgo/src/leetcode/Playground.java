@@ -9,7 +9,7 @@ import leetcode.recursions.LetterOfPhoneNumber;
 public class Playground {
     public static void main(String[] args) {
         LetterOfPhoneNumber l = new LetterOfPhoneNumber();
-        l.letterCombinations("2");
+        l.letterCombinations("22");
     }
 
     private static void printIntArray(int[] nums) {

@@ -36,25 +36,35 @@ public class LetterOfPhoneNumber {
         }
     }
 
-    public void iLetterCombinations(char[] digitsArray, List<String> results) {
-        // Initialize ret;
-        char[] ret = new char[digitsArray.length];
-        for (int i = digitsArray.length - 1; i >= 0; --i) {
-            int curDigit = digitsArray[i] - '0';
-            ret[i] = dict[curDigit].charAt(0);
+    public void iLetterCombinations(char[] digitsCharArray, List<String> results) {
+        int strLength = digitsCharArray.length;
+        int[] digits = new int[strLength];
+        for(int i = 0; i < strLength; ++i) {
+            digits[i] = digitsCharArray[i] - '0';
         }
+        char[] ret = new char[strLength];
+        int[] idx = new int[strLength];
 
-        int i = digitsArray.length - 1;
+        int i = strLength - 1;
         while(i >= 0) {
-            int curDigit = digitsArray[i] - '0';
-            ret[i] = dict[curDigit].charAt(j);
-            results.add(new String(ret));
+            results.add(this.convertIdxToString(digits, idx, ret));
 
-            ++j;
-            if (j == dict[curDigit].length()) {
+            i = strLength - 1;
+            idx[i] += 1;
+            while(i >= 0 && idx[i] == dict[digits[i]].length()) {
+                idx[i] = 0;
                 --i;
-                j = 0;
+                if (i >= 0) {
+                    idx[i] += 1;
+                }
             }
         }
+    }
+
+    private String convertIdxToString(int[] digits, int[] idx, char[] ret) {
+        for (int i = 0; i < ret.length; ++i) {
+            ret[i] = dict[digits[i]].charAt(idx[i]);
+        }
+        return new String(ret);
     }
 }
