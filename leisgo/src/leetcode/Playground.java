@@ -1,14 +1,14 @@
 package leetcode;
 
-import java.util.List;
+import leetcode.recursions.LetterOfPhoneNumber;
 
 /**
  * Created by sunlei on 3/12/16.
  */
 public class Playground {
     public static void main(String[] args) {
-        Permutation p = new Permutation();
-        List<List<Integer>> permutations = p.getPermutationsWithSwap(new int[] {1, 2, 3});
+        LetterOfPhoneNumber l = new LetterOfPhoneNumber();
+        l.letterCombinations("2");
     }
 
     private static void printIntArray(int[] nums) {
