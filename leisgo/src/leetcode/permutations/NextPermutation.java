@@ -1,7 +1,7 @@
-package leetcode;
+package leetcode.permutations;
 
 /**
- * For leetcode problem 31: Next Permutation
+ * For leetcode problem 31: Next FullPermutation
  * Created by leis on 3/21/16.
  */
 public class NextPermutation {

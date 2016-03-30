@@ -1,19 +1,12 @@
-package leetcode;
+package leetcode.permutations;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
  * Created by sunlei on 3/24/16.
  */
-public class Permutation {
-
-    /**
-     * Given a collection of distinct numbers, return all possible permutations.
-     * @param nums: an array of distinct numbers.
-     * @return: All permutations of input numbers.
-     */
+public class FullPermutation {
     public List<List<Integer>> getPermutationsWithSwap(int[] nums) {
         List<List<Integer>> results = new ArrayList<>();
         // Corner cases:
@@ -22,7 +15,7 @@ public class Permutation {
         }
 
         //
-        List<Integer> tempRet = new ArrayList<Integer>(nums.length);
+        List<Integer> ret = new ArrayList<Integer>(nums.length);
         boolean[] isUsed = new boolean[nums.length];
         getPermutationWithSwap(nums, 0, results);
         return results;
