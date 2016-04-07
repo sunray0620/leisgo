@@ -2,6 +2,8 @@ package leetcode;
 
 
 import leetcode.dp.MaxProductSubarray;
+import leetcode.dp.RegularExpressionMatching;
+import leetcode.dp.UniqueBSTrees2;
 import leetcode.recursions.LetterOfPhoneNumber;
 
 /**
@@ -9,9 +11,8 @@ import leetcode.recursions.LetterOfPhoneNumber;
  */
 public class Playground {
     public static void main(String[] args) {
-        MaxProductSubarray mps = new MaxProductSubarray();
-        int ret = mps.maxProduct(new int[] {-4, -3, -2});
-        System.out.println(ret);
+        RegularExpressionMatching rem = new RegularExpressionMatching();
+        rem.isMatch("aaa", "ab*a");
     }
 
     private static void printIntArray(int[] nums) {
